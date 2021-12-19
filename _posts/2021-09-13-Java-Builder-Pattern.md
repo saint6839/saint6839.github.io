@@ -4,8 +4,6 @@ title:  "Java Builder Pattern"
 date:   2021-09-13T14:25:52-05:00
 author: sangyeop
 categories: Java
-
-
 ---
 
 
