@@ -1,7 +1,18 @@
+---
+layout: post
+title:  "RecyclerView with Firebase"
+date:   2021-08-18T14:25:52-05:00
+author: sangyeop
+categories: Android
+
+---
+
+
+
 # 파이어베이스 리사이클러뷰 갱신
 
 - <span style="color:red"> **RecyclerView with Firebase DB**</span>
-    
+  
     1. 파이어베이스에서 제공하는 메소드 중 **addValueEventListener()**를 사용
         1. 이 안에서 onDataChange() 메소드를 재정의한다
     

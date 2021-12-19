@@ -1,3 +1,17 @@
+---
+layout: post
+title:  "Google Login with Firebase Authentication"
+date:   2021-08-20T14:25:52-05:00
+author: sangyeop
+categories: Android
+
+
+---
+
+
+
+
+
 # 파이어베이스 구글 자동로그인
 
 - **구글 자동로그인 구현하는방법**

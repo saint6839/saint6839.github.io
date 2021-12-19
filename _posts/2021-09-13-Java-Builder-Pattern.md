@@ -1,3 +1,17 @@
+---
+layout: post
+title:  "Java Builder Pattern"
+date:   2021-09-13T14:25:52-05:00
+author: sangyeop
+categories: Java
+
+
+---
+
+
+
+
+
 # 자바 생성자 빌더 패턴
 
 일반적으로 우리는 데이터 클래스를 아래와 같이 정의한다.

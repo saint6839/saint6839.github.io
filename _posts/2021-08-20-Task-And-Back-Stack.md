@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "Task and Back Stack"
+date:   2021-08-20T14:25:52-05:00
+author: sangyeop
+categories: Android
+
+
+---
+
+
+
 # 태스크와 백스택 ( Intent Flag )
 
 - <span style="color:red">**액티비티의 백스택 순서는 재정렬 될 수 없다**</span>

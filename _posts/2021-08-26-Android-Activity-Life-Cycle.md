@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "Android Activity Life Cycle"
+date:   2021-08-26T14:25:52-05:00
+author: sangyeop
+categories: Android
+
+
+---
+
+
+
 # 안드로이드 생명주기
 
 안드로이드의 생명주기는 다음과 같다.

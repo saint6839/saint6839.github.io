@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "Naming of Static Factory Method"
+date:   2021-08-25T14:25:52-05:00
+author: sangyeop
+categories: Java
+
+
+---
+
+
+
 # 정적 팩토리 메소드의 명명 방식
 
 - #### from

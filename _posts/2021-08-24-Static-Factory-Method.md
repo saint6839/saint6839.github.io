@@ -1,3 +1,17 @@
+---
+layout: post
+title:  "Static Factory Method"
+date:   2021-08-24T14:25:52-05:00
+author: sangyeop
+categories: Android
+
+
+---
+
+
+
+
+
 # 정적 팩토리 메소드
 
 - #### **장점**
