@@ -67,3 +67,5 @@ DELETE /members/1
 | /users/{userId}/height      | {userId}에 해당하는 사용자의 height 조회        |
 | /users/{userId}/mbti        | {userId}에 해당하는 사용자의 mbti 조회          |
 | /users/{userId}/personality | {userId}에 해당하는 사용자의 personality 조회   |
+
+일단은 내가 프로젝트에서 맡은 역할은 저장된 데이터를 조회하여 뷰에 반영하는 것이기 때문에 GET 메소드에 대한 처리만 설계를 해보았다. 
