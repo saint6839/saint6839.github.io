@@ -4,8 +4,6 @@ title:  "Naming of Static Factory Method"
 date:   2021-08-25T14:25:52-05:00
 author: sangyeop
 categories: Java
-
-
 ---
 
 
