@@ -3,7 +3,7 @@ layout: post
 title:  "HTTP API Simple Example"
 date:   2022-01-12T00:00:00-00:00
 author: sangyeop
-categories: Spring
+categories: TIL
 
 
 ---
