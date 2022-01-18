@@ -206,5 +206,5 @@ class TmiDataRepositoryTest {
 
 다음과 같이 실행하면 검증을 통과하고 MongoDB에 성공적으로 저장된다. 
 
-![mongodb-tree](/Users/chaesang-yeob/Desktop/blog/saint6839.github.io/assets/mongodb-tree.png)
+<img width="375" alt="mongodb-tree" src="https://user-images.githubusercontent.com/78407939/149900076-04c03942-03b1-47e3-a537-dcf7c8237891.png">
 
