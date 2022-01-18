@@ -14,7 +14,7 @@ categories: Spring
 
 ------
 
-![spring_mvc_structure](/Users/chaesang-yeob/Desktop/blog/saint6839.github.io/images/spring_mvc_structure.png)
+![spring_mvc_structure](https://user-images.githubusercontent.com/78407939/149900521-59ef948e-8257-4292-9361-a6b08c238f70.png)
 
 
 
