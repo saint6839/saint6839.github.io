@@ -3,7 +3,7 @@ layout: post
 title:  "레이싱 게임 미션 페어프로그래밍 - Day1"
 date:   2022-02-11T00:00:00-00:00
 author: sangyeop
-categories: Sproutt 2nd
+categories: Sproutt-2nd
 
 
 
