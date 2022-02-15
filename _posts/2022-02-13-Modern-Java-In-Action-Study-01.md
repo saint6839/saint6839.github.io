@@ -105,7 +105,7 @@ categories: Sproutt-2nd
 
 ------
 
-자바에서 `함수 = 메소드`를 의미한다. 특히 `정적 메소드`와 같은 의미로 사용된다.
+프로그래밍 언어에서 `함수 = 메소드`를 의미한다. 특히 `정적 메소드`와 같은 의미로 사용된다.
 
 자바에서는 원시형 타입(int, double .. 등등), 객체(new String("abc"), new Integer(1111) ... 등등) 모두 값이다. 심지어 배열도 객체인데 왜 함수가 필요할까?
 
@@ -271,4 +271,4 @@ public interface List<E> extends Collection<E> {
     - Windows - 운영 체제
     - IIS - 웹 서버
     - MySQL 또는 MSSQL - DBMS
-    - PHP 또는 Perl 또는 Python - 프로그래밍언어ㅈ
+    - PHP 또는 Perl 또는 Python - 프로그래밍언어
