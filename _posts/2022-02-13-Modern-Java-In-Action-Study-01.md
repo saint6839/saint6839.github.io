@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "모던 자바 인 액션 스터디 - Week1"
+title:  "모던 자바 인 액션 스터디 - chapter1"
 date:   2022-02-13T00:00:00-00:00
 author: sangyeop
 categories: Sproutt-2nd
@@ -11,7 +11,7 @@ categories: Sproutt-2nd
 
 ---
 
-# 새싹 개발 서적 스터디 - 모던 자바 인 액션 Week1
+# 새싹 개발 서적 스터디 - 모던 자바 인 액션 Chapter1
 
 
 
