@@ -54,9 +54,9 @@ categories: Sproutt-2nd
 
   ```java
   public static List<Apple> filterGreenApples(List<Apple> inventory) {
-    List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
+    List<Apple> result = new ArrayList<>();	// 사과 누적 리스트
     for(Apple apple : inventory) {
-    	if(GREEN.equals(apple.getColor())) {				// 녹색 사과만 선택
+    	if(GREEN.equals(apple.getColor())) {	// 녹색 사과만 선택
       	result.add(apple);
       }
     }
@@ -73,9 +73,9 @@ categories: Sproutt-2nd
 
   ```java
   public static List<Apple> filterApplesByColor(List<Apple> inventory, Color color) {
-    List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
+    List<Apple> result = new ArrayList<>();	// 사과 누적 리스트
     for(Apple apple : inventory) {
-    	if(apple.getColor().equals(color)) {				// 파라미터로 지정된 색(color)와 같으면 선택
+    	if(apple.getColor().equals(color)) {	// 파라미터로 지정된 색(color)와 같으면 선택
       	result.add(apple);
     	}
     }
@@ -118,12 +118,12 @@ categories: Sproutt-2nd
 
 ```java
 public interface ApplePredicate {
-	boolean test (Apple apple);								// 참 거짓을 판별하는 코드가 반복되고 있으므로 추상화 한다.
+	boolean test (Apple apple);	// 참 거짓을 판별하는 코드가 반복되고 있으므로 추상화 한다.
 }
 ```
 
 ```java
-public class AppleHeavyWeightPredicate implements ApplePredicate {			// 무거운 사과만 선택
+public class AppleHeavyWeightPredicate implements ApplePredicate { // 무거운 사과만 선택
 	public boolean test(Apple apple) {
 		return apple.getWeight > 150;
 	}
@@ -131,7 +131,7 @@ public class AppleHeavyWeightPredicate implements ApplePredicate {			// 무거�
 ```
 
 ```java
-public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 사과만 선택
+public class AppleGreenColorPredicate implements ApplePredicate {	// 초록 사과만 선택
 	public boolean test(Apple apple) {
 		return GREEN.equals(apple.getColor());
 	}
@@ -152,7 +152,7 @@ public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 �
   public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
   	List<Apple> result = new ArrayList<>();
   	for(Apple apple : inventory) { 
-  		if(p.test(apple)) {								// ApplePredicate 객체로 감싸서 test()메서드 전달
+  		if(p.test(apple)) {		// ApplePredicate 객체로 감싸서 test()메서드 전달
   			result.add(apple);
   		}
   	}
