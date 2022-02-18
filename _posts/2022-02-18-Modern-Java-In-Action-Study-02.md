@@ -54,12 +54,12 @@ categories: Sproutt-2nd
 
   ```java
   public static List<Apple> filterGreenApples(List<Apple> inventory) {
-      List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
-      for(Apple apple : inventory) {
-      		if(GREEN.equals(apple.getColor())) {				// 녹색 사과만 선택
-      				result.add(apple);
-      		}
+    List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
+    for(Apple apple : inventory) {
+    	if(GREEN.equals(apple.getColor())) {				// 녹색 사과만 선택
+      	result.add(apple);
       }
+    }
   }
   ```
 
@@ -73,12 +73,12 @@ categories: Sproutt-2nd
 
   ```java
   public static List<Apple> filterApplesByColor(List<Apple> inventory, Color color) {
-      List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
-      for(Apple apple : inventory) {
-      		if(apple.getColor().equals(color)) {				// 파라미터로 지정된 색(color)와 같으면 선택
-      				result.add(apple);
-      		}
-      }
+    List<Apple> result = new ArrayList<>();					// 사과 누적 리스트
+    for(Apple apple : inventory) {
+    	if(apple.getColor().equals(color)) {				// 파라미터로 지정된 색(color)와 같으면 선택
+      	result.add(apple);
+    	}
+    }
   }
   ```
 
@@ -93,12 +93,12 @@ categories: Sproutt-2nd
 
   ```java
   public static List<Apple> filterApplesByWeight(List<Apple> inventory, int weight) {
-  		List<Apple> result = new ArrayList<>();
-  		for(Apple apple : inventory) {
-  				if(apple.getWeight() > weight) {
-  						result.add(apple);
-  				}
+  	List<Apple> result = new ArrayList<>();
+  	for(Apple apple : inventory) {
+  		if(apple.getWeight() > weight) {
+  			result.add(apple);
   		}
+  	}
   }
   ```
 
@@ -118,23 +118,23 @@ categories: Sproutt-2nd
 
 ```java
 public interface ApplePredicate {
-		boolean test (Apple apple);								// 참 거짓을 판별하는 코드가 반복되고 있으므로 추상화 한다.
+	boolean test (Apple apple);								// 참 거짓을 판별하는 코드가 반복되고 있으므로 추상화 한다.
 }
 ```
 
 ```java
 public class AppleHeavyWeightPredicate implements ApplePredicate {			// 무거운 사과만 선택
-		public boolean test(Apple apple) {
-				return apple.getWeight > 150;
-		}
+	public boolean test(Apple apple) {
+		return apple.getWeight > 150;
+	}
 }
 ```
 
 ```java
 public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 사과만 선택
-		public boolean test(Apple apple) {
-				return GREEN.equals(apple.getColor());
-		}
+	public boolean test(Apple apple) {
+		return GREEN.equals(apple.getColor());
+	}
 }
 ```
 
@@ -150,13 +150,13 @@ public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 �
 
   ```java
   public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
-  		List<Apple> result = new ArrayList<>();
-  		for(Apple apple : inventory) { 
-  				if(p.test(apple)) {								// ApplePredicate 객체로 감싸서 test()메서드 전달
-  						result.add(apple);
-  				}
+  	List<Apple> result = new ArrayList<>();
+  	for(Apple apple : inventory) { 
+  		if(p.test(apple)) {								// ApplePredicate 객체로 감싸서 test()메서드 전달
+  			result.add(apple);
   		}
-    	return result;
+  	}
+    return result;
   }
   ```
 
@@ -164,9 +164,9 @@ public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 �
 
   ```java
   public class AppleRedAndHeavyPredicate implements ApplePredicate {
-  		public boolean test(Apple apple) {
-  				return RED.equals(apple.getColor()) && apple.getWeight() > 150;
-  		}
+  	public boolean test(Apple apple) {
+  		return RED.equals(apple.getColor()) && apple.getWeight() > 150;
+  	}
   }
   ```
 
@@ -198,9 +198,9 @@ public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 �
 
   ```java
   List<Apple> redApples = filterApples(inventory, new ApplePredicate() {
-  		public boolean test(Apple apple) {
-  				return RED.equals(apple.getColor());
-  		}
+  	public boolean test(Apple apple) {
+  		return RED.equals(apple.getColor());
+  	}
   })
   ```
 
@@ -220,19 +220,19 @@ public class AppleGreenColorPredicate implements ApplePredicate {				// 초록 �
 
   ```java
   public interface Predicate<T> {
-  		boolean test(T t);
+  	boolean test(T t);
   }
   ```
 
   ```java
   public static <T> List<T> filter(List<T> list, Predicate<T> p) {
-  		List<T> result = new ArrayList<>();
-  		for(T e : list) {
-  				if(p.test(e)) {
-  						result.add(e);
-  				}
+  	List<T> result = new ArrayList<>();
+  	for(T e : list) {
+  		if(p.test(e)) {
+  			result.add(e);
   		}
-    	return result;
+  	}
+    return result;
   }
   ```
 
