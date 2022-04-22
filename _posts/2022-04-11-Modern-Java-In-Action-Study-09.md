@@ -300,8 +300,6 @@ public Set<Characteristics> characteristics() {
 }
 ```
 
-
-
 ### 마치며
 
 - `collect`는 스트림 요소를 요약 결과로 누적하는 다양한 방법을 인수로 갖는 최종 연산이다.
