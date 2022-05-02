@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "@Transaction"
+title:  "@Transactional"
 date:   2021-12-30T00:00:00-00:00
 author: sangyeop
 categories: Spring
