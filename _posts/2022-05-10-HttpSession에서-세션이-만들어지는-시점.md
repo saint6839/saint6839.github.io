@@ -119,3 +119,21 @@ public void login_failed() throws Exception {
 세 가지 방법중에서 실제로 `setAttribute()`가 호출되는 시점에 세션 값을 저장하는 방법이 있는데, 바로 **`@Autowired`를 이용해 객체를 주입하여 사용하는 방법**이다. 이 방법은 컨트롤러의 메서드가 호출되는 시점이 아닌, 실제 `setAttribute()`가 호출되는 시점에 세션을 생성하기 때문에, 내가 테스트하고자 하는 목적에 부합하는 방법이었다.
 
 이 방법을 사용해서 로그인이 성공 했을때만 세션이 만들어지도록 구현할 수 있었다.
+
+```java
+@Autowired
+private HttpSession httpSession;
+
+PostMapping("/login")
+public String login(String userId, String password) {
+    try {
+        User user = userService.login(userId, password);
+        httpSession.setAttribute(HttpSessionUtils.USER_SESSION_KEY, user);
+        log.debug("컨트롤러 세션 값 =" + httpSession.getAttribute(HttpSessionUtils.USER_SESSION_KEY));
+    } catch (UnAuthenticationException unAuthenticationException) {
+        return "user/login_failed";
+    }
+    return "redirect:/users";
+}
+```
+
