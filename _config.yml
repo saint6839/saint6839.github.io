@@ -23,12 +23,13 @@ url: "https://saint6839.github.io/"
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
+remote_theme : "mmistakes/minimal-mistakes"
 # Build settings
 markdown: kramdown
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false
-highlightjs_theme: "monokai_sublime"
+highlightjs_theme: "a-11-y-light"
 
 # Pagination Settings
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
