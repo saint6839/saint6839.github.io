@@ -13,6 +13,22 @@ categories: Spring
 
 - UserController.class
 
+~~~java
+@PostMapping("/login")
+public String login(String userId, String password, HttpSession httpSession) {
+    try {
+        User user = userService.login(userId, password);
+        httpSession.setAttribute(HttpSessionUtils.USER_SESSION_KEY, user);
+        log.debug("컨트롤러 세션 값 =" + httpSession.getAttribute(HttpSessionUtils.USER_SESSION_KEY));
+    } catch (UnAuthenticationException unAuthenticationException) {
+        return "user/login_failed";
+    }
+    return "redirect:/users";
+}
+~~~
+
+
+
 ```java
 @PostMapping("/login")
 public String login(String userId, String password, HttpSession httpSession) {
