@@ -29,7 +29,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
 inter_post_navigation: true
-highlightjs_theme: "monokai_sublime"
+highlightjs_theme: "monokai-sublime"
 
 # Pagination Settings
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
