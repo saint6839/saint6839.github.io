@@ -13,12 +13,7 @@ categories: Spring
 
 - UserController.class
 
-  변경변경
-
-{% highlight java %}
-
 ```java
-{% highlight java %}
 @PostMapping("/login")
 public String login(String userId, String password, HttpSession httpSession) {
     try {
@@ -30,10 +25,7 @@ public String login(String userId, String password, HttpSession httpSession) {
     }
     return "redirect:/users";
 }
-{% endhighlight java %}
 ```
-
-{% endhighlight java %}
 
 - LoginAcceptanceTest.class
 
