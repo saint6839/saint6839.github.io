@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.mail.MessagingException;
+import java.io.UnsupportedEncodingException;
+
 @Controller
 @RequestMapping("/users")
 @Slf4j
 public class UserController {
 
-    private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+    @Autowired
+    private UserService userService;
 
     @Autowired
     private EmailService emailService;
@@ -34,7 +34,7 @@ public class UserController {
 
     @GetMapping("")
     @ResponseBody
-    public void test() {
-        emailService.sendSimpleMessage("hyeonji0718@gmail.com", "맨지야", "바보");
+    public void test() throws MessagingException, UnsupportedEncodingException {
+        emailService.sendSimpleMessage("hyeonji0718@gmail.com", "손말잇기 회원가입 인증코드입니다.");
     }
 }
