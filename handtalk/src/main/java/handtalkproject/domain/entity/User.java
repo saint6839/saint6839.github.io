@@ -18,11 +18,13 @@ public class User {
     private String password;
     private String name;
     private String email;
+    private boolean isEmailAuthorized;
 
-    public User(String userId, String password, String name, String email) {
+    public User(String userId, String password, String name, String email, boolean isEmailAuthorized) {
         this.userId = userId;
         this.password = password;
         this.name = name;
         this.email = email;
+        this.isEmailAuthorized = isEmailAuthorized;
     }
 }

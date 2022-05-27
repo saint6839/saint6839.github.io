@@ -52,7 +52,7 @@ class UserControllerTest {
     }
 
     User createUser() {
-        return new User("userId1", "password1", "name1", "email1");
+        return new User("userId1", "password1", "name1", "email1", false);
     }
 
 }
