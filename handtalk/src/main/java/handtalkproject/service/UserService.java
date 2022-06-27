@@ -16,6 +16,9 @@ public class UserService {
     }
 
     public User save(User user) {
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new RuntimeException();
+        }
         return userRepository.save(user);
     }
 }

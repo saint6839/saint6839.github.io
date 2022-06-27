@@ -2,51 +2,53 @@ package handtalkproject.service;
 
 import handtalkproject.domain.entity.User;
 import handtalkproject.repository.UserRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
-import static org.mockito.Mockito.when;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-@ExtendWith(MockitoExtension.class)
+@SpringBootTest
+@Transactional
 class UserServiceTest {
-    @Mock
+    @Autowired
     UserRepository userRepository;
 
-    @InjectMocks
+    @Autowired
     UserService userService;
 
-    MockMvc mockMvc;
+    private User user;
 
     @BeforeEach
     void setUp() {
-        mockMvc = MockMvcBuilders.standaloneSetup(userService)
-                                 .build();
+        user = new User("userId1", "password1", "name1", "email1", false);
     }
 
     @Test
     @DisplayName("사용자 회원가입이 잘 되는지 테스트")
-    void save() throws Exception {
+    void signUp() {
         //given
-        User user = createUser();
-
         //when
-        when(userRepository.save(user)).thenReturn(user);
         User savedUser = userService.save(user);
 
         //then
-        Assertions.assertThat(savedUser)
-                  .isEqualTo(user);
+        assertThat(user).isEqualTo(savedUser);
     }
 
-    User createUser() {
-        return new User("userId1", "password1", "name1", "email1", false);
+    @Test
+    @DisplayName("이미 존재하는 이메일로 회원가입을 시도할 때 회원가입이 안되도록 하는지 테스트")
+    void duplicatedEmailsignUp() {
+        //given
+        userService.save(user);
+
+        //when
+        User duplicatedUser = new User("userId1", "password1", "name1", "email1", false);
+
+        //then
+        assertThatThrownBy(() -> userService.save(duplicatedUser)).isInstanceOf(RuntimeException.class);
     }
 }
