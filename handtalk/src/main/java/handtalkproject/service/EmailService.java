@@ -49,7 +49,6 @@ public class EmailService {
         message.addRecipients(Message.RecipientType.TO, to);
         message.setSubject(subject);
         message.setFrom(new InternetAddress("saint6839@gmail.com", "손말잇기"));
-//        message.setFrom("saint6839@gmail.com");
         message.setText(createText(), "utf-8", "html");
         emailSender.send(message);
     }
@@ -71,5 +70,9 @@ public class EmailService {
         msg += "</div>";
 
         return msg;
+    }
+
+    public boolean isAuthorized(String emailAuthKey) {
+        return ePw.equals(emailAuthKey);
     }
 }
